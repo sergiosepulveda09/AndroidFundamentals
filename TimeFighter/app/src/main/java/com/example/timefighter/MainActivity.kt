@@ -50,11 +50,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun incrementScore() {
-        startGame()
         score += 1
         val newScore = getString(R.string.yourScore, score)
         gameScoreTextView.text = newScore
-
+        if (!gameStarted) {
+            startGame()
+        }
     }
 
     private fun startGame() {
