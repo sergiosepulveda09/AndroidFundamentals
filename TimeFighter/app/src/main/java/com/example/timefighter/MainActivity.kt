@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.util.Log
+import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
@@ -36,6 +37,8 @@ class MainActivity : AppCompatActivity() {
         gameScoreTextView = findViewById(R.id.gameScoreTextView)
         timeLeftTextView = findViewById(R.id.timeLeftTextView)
         tapMeButton.setOnClickListener { view ->
+            val bounceAnimation = AnimationUtils.loadAnimation(this, R.anim.animation)
+            view.startAnimation(bounceAnimation)
             incrementScore()
         }
 
