@@ -69,7 +69,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showInfo() {
-        val dialogTitle = getString(R.string.aboutTitle, BuildConfig.VERSION_NAME)
+        val dialogTitle = getString(R.string.aboutTitle)
         val dialogMessage = getString(R.string.aboutMessage)
 
         val builder = AlertDialog.Builder(this)
